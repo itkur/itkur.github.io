@@ -132,7 +132,11 @@ img { max-width: 100%; height: auto; display: block; }
 .logo-area { display: flex; align-items: center; gap: 14px; }
 .logo-mark { height: 36px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
 .logo-mark img { height: 100%; width: auto; display: block; }
-.logo-text { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; color: var(--text); }
+.nav-brand-text { display: flex; flex-direction: column; gap: 2px; }
+.logo-text { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; color: var(--text); line-height: 1.2; }
+.logo-sub { font-size: 0.65rem; color: var(--text-muted); letter-spacing: 0.3px; font-weight: 400; line-height: 1.2; }
+.logo-sub a { color: var(--text-muted); transition: color 0.3s; }
+.logo-sub a:hover { color: var(--accent); }
 .header-nav { display: flex; align-items: center; gap: 32px; }
 .header-nav a {
   font-size: 0.8rem; font-weight: 500; letter-spacing: 0.8px; text-transform: uppercase;
@@ -322,6 +326,7 @@ img { max-width: 100%; height: auto; display: block; }
   .mobile-menu-btn { display: block; }
 }
 @media (max-width: 640px) {
+  .logo-sub { display: none; }
   .announcement { font-size: 0.65rem; padding: 8px 16px; letter-spacing: 1px; }
   .hero-content { padding: 40px 20px; }
   .hero h1 { font-size: 1.8rem; }
@@ -483,7 +488,10 @@ function main() {
       <div class="logo-mark">
         <img src="${esc(fixImg(meta.siteLogo || '', siteUrl))}" alt="${esc(siteName)}">
       </div>
-      <div class="logo-text">${esc(siteName)}</div>
+      <div class="nav-brand-text">
+        <div class="logo-text">${esc(siteName)}</div>
+        <div class="logo-sub">新商城网址：<a href="${siteUrl}" target="_blank" rel="noopener">${esc(siteUrl)}</a></div>
+      </div>
     </a>
     <nav class="header-nav">
       <a href="#products">全部商品</a>
