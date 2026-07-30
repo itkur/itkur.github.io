@@ -129,7 +129,7 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
   justify-content: space-between;
 }
-.logo-area { display: flex; align-items: center; gap: 14px; }
+.logo-area { display: flex; align-items: center; gap: 10px; }
 .logo-mark { height: 36px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
 .logo-mark img { height: 100%; width: auto; display: block; }
 .nav-brand-text { display: flex; flex-direction: column; gap: 2px; }
